@@ -1,0 +1,12 @@
+[submodule "semgrep-interfaces"]
+	path = semgrep-interfaces
+	url = https://github.com/returntocorp/semgrep-interfaces.git
+[submodule "go-jsonschema"]
+	path = go-jsonschema
+	url = https://github.com/atombender/go-jsonschema.git
+[submodule "juice-shop"]
+	path = juice-shop
+	url = https://github.com/juice-shop/juice-shop.git
+[submodule "semgrep"]
+	path = semgrep
+	url = https://github.com/returntocorp/semgrep.git
