@@ -11,9 +11,9 @@ import (
 // scan was produced using semgrep CLI on JuiceShop project.
 // Command: semgrep ci --config=p/typescript --json | jq > juiceshop-semgrep-scan.json
 func TestSemgrepOutputV1Jsonschema_Encoding(t *testing.T) {
-	f, err := os.Open("juiceshop-semgrep-scan.json")
+	f, err := os.Open("juice-shop-semgrep-scan.json")
 	if err != nil {
-		t.FailNow()
+		t.Fatal(err)
 	}
 
 	var SemgrepScan SemgrepOutputV1Jsonschema
@@ -31,4 +31,6 @@ func TestSemgrepOutputV1Jsonschema_Encoding(t *testing.T) {
 	if buf.Len() < 1_000 {
 		t.Fatal("Unexpected number of bytes encoded")
 	}
+
+	t.Log("Version:", *SemgrepScan.Version)
 }
